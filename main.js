@@ -2,6 +2,7 @@ const loginDiv = document.getElementById('loginDiv');
 const mainUI = document.getElementById('mainUI');
 let token = null;
 
+// Login
 document.getElementById('loginBtn').onclick = async () => {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -21,6 +22,7 @@ document.getElementById('loginBtn').onclick = async () => {
     }
 };
 
+// Ambil UID
 document.getElementById('ambilBtn').onclick = async () => {
     const res = await fetch('https://YOUR_BACKEND_URL/api/uid', {
         headers:{'Authorization': token}
